@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react'
 
 const Auth = (props) => {
-
     const [signup, setSignup] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorText, setErrorText] = useState('');
 
-    
     const handleSubmit = async (e) => {
         e.preventDefault();
         const apiURL = `https://useracess.herokuapp.com/user/${signup ? 'create' : 'login'}`;
@@ -53,7 +51,6 @@ const Auth = (props) => {
     useEffect(() => {
         props.setIsClass(Boolean(Auth?.prototype?.render))
     })
-
 
     return (
         <>
